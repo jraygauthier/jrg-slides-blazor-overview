@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Raymond Gauthier">
+  <title>Midi Amotus - Blazor Overview</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./revealjs-assets/css/reset.css">
+  <link rel="stylesheet" href="./revealjs-assets/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="./revealjs-assets/css/theme/night.css" id="theme">
+  <link rel="stylesheet" href="./css/revealjs.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? './revealjs-assets/css/print/pdf.css' : './revealjs-assets/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="./revealjs-assets/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Midi Amotus - Blazor Overview</h1>
+  <p class="author">Raymond Gauthier</p>
+  <p class="date">2021/02/04</p>
+</section>
+
+<section>
+<section id="blazor---quest-ce-que-cest" class="title-slide slide level1">
+<h1>Blazor - Qu’est-ce que c’est?</h1>
+
+</section>
+<section id="blazor---quest-ce-que-cest-1" class="slide level2">
+<h2>Blazor - Qu’est-ce que c’est?</h2>
+<div class="columns">
+<div class="column">
+<div class="columns">
+<div class="column">
+<p><img data-src="./media/39b98604598e36dc31f242600c40bb24d678bcea.png" style="width:100.0%" alt="Blazor Logo" /><br />
+</p>
+<div class="columns">
+<div class="column">
+<p><img data-src="./media/44a764b9310e3cb41b387a0c3abe4d890b6c484e.png" style="width:100.0%" alt="CSharp Logo" /><br />
+</p>
+</div><div class="column">
+<p><img data-src="./media/10379e846a32b3b3f5a0ba866cd6cfa7d2d1bd91.png" style="width:100.0%" alt="WASM Logo" /><br />
+</p>
+</div>
+</div>
+</div><div class="column">
+<p><img data-src="./media/33d78541460aed85afa46d7871bd961762e93d35.png" style="width:100.0%" alt="[Microsoft]" /><br />
+</p>
+</div>
+</div>
+</div><div class="column">
+<ul>
+<li class="fragment"><p>Framework gratuit et open-source.</p></li>
+<li class="fragment"><p>Permet la construction d’interface utilisateur côté client en utilisant <em>C#</em> et fichiers <code>*.razor</code> (mix <em>html</em> et <em>C#</em>).</p></li>
+<li class="fragment"><p>Une abtraction intéressante sur le rendering du <em>DOM</em> qui permet que celui-ci soit rendu autant côté client que server.</p>
+<ul>
+<li class="fragment">Va un peu dans le sens des <a href="https://medium.com/@ElyseKoGo/an-introduction-to-isomorphic-web-application-architecture-a8c81c42f59">applications web isomorphes</a>.</li>
+</ul></li>
+<li class="fragment"><p>On va même plus loin en permettant que votre <em>static web app</em> en <em>C#</em> roule completement côté client via compilation <em>Web Assembly</em>.</p></li>
+<li class="fragment"><p>Premier <em>release</em>: 2018, donc assez récent.</p></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="blazor---pourquoi" class="title-slide slide level1">
+<h1>Blazor - Pourquoi?</h1>
+
+</section>
+<section id="blazor---pourquoi-1" class="slide level2">
+<h2>Blazor - Pourquoi?</h2>
+<div class="columns">
+<div class="column">
+<div class="columns">
+<div class="column">
+<p><img data-src="./media/5917d338e5bca259d4858ebe963c04f0b719a6bb.png" style="width:100.0%" alt="No JS Logo" /><br />
+<img data-src="./media/4bb5a9559d8e82c03158b0553ec20e22c8e5bf30.png" style="width:100.0%" alt="CSharp &lt;-&gt; JS" /><br />
+</p>
+</div><div class="column">
+<p><img data-src="./media/efed8682cdc68f865719b1bbd7035ff6dec52da3.png" style="width:75.0%" alt="DotNet Core Logo" /><br />
+<img data-src="./media/1f7de5fd8dfbaa6a3d7b2bbbfa9bd92129fa39b2.png" style="width:75.0%" alt="Linux Logo" /><br />
+</p>
+</div>
+</div>
+</div><div class="column">
+<ul>
+<li class="fragment"><p>Permet d’écrire votre code en <em>C#</em> plutôt que <em>Javascript</em>.</p>
+<p>On peut donc partager du code entre le frontend et le backend.</p></li>
+<li class="fragment"><p>Functionne super bien en linux!</p>
+<p>Gracieuseté de <em>.NET core</em>.</p></li>
+<li class="fragment"><p>Très simple à mettre en place et rouler:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>$ <span class="ex">dotnet</span> new <span class="st">&quot;Blazor Server App&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>$ <span class="ex">dotnet</span> restore <span class="kw">&amp;&amp;</span> <span class="ex">dotnet</span> run</span></code></pre></div></li>
+<li class="fragment"><p>Interopérabilité Javascript.</p>
+<p>Il est donc possible d’utiliser vos libraries javascript préférées si désiré.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="quelques-aspect-moins-intéressants" class="slide level2">
+<h2>Quelques aspect moins intéressants</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment"><p>Itération un peu longue lorsque comparée à des languages qui ne requiert pas de phases de compilation.</p>
+<ul>
+<li class="fragment">Peu être un peu annuyant lorsqu’on travail sur aspect ui.</li>
+<li class="fragment"><em>Hot reload</em> des fichier <code>*.razor</code> apparament à venir.</li>
+</ul></li>
+</ul>
+</div><div class="column">
+<ul>
+<li class="fragment"><p>Framework peut être assez opaque / complexe.</p>
+<ul>
+<li class="fragment"><p>Beaucoup de documentation pour setup complexes clé en main.</p></li>
+<li class="fragment"><p>Par contre, lorsqu’on veut quelque chose de plus simple / épuré, on est un peu laissé à nous même. Examples:</p>
+<ul>
+<li class="fragment">Login simple basé sur cockie session.</li>
+</ul></li>
+<li class="fragment"><p>Il aura fallu à quelques reprises lorsque documentation déficiente:</p>
+<ul>
+<li class="fragment">Chercher dans les examples.</li>
+<li class="fragment">Chercher dans le code.</li>
+<li class="fragment">Heureusement, open source!</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="blazor---concepts-de-base" class="title-slide slide level1">
+<h1>Blazor - Concepts de base</h1>
+
+</section>
+<section id="blazor---fichiers-.razor-composants" class="slide level2">
+<h2>Blazor - Fichiers <code>*.razor</code> &amp; composants</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="./media/cc15a21d139113ad70d03c8b2aa047cf6db881fe.png" style="width:50.0%" alt="Razor Logo" /><br />
+</p>
+<p><img data-src="./media/a9f75fd4a40751019cecf7b375f1e511c37b5c46.png" style="width:100.0%" alt="Razor counter example" /><br />
+</p>
+</div><div class="column">
+<ul>
+<li class="fragment"><p>Permet de mixer le code C# et html à même le fichier <code>*.razor</code>.</p></li>
+<li class="fragment"><p>Le composant est un object C#, pouvant avoir des états, etc.</p></li>
+<li class="fragment"><p>Il est possible de complètement séparer le code C# pour qu’il soit dans un <code>*.cs</code>.</p>
+<p>On utilise alors une petite convention de noms.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="blazor---razor---code-blocs" class="slide level2">
+<h2>Blazor - Razor - Code blocs</h2>
+<pre class="razor"><code>@{
+    var quote = &quot;The future depends on what you do today. - Mahatma Gandhi&quot;;
+}
+
+&lt;p&gt;@quote&lt;/p&gt;</code></pre>
+</section>
+<section id="blazor---razor---looping-iterating" class="slide level2">
+<h2>Blazor - Razor - Looping / iterating</h2>
+<pre class="razor"><code>@foreach (var person in people)
+{
+    &lt;p&gt;Name: @person.Name&lt;/p&gt;
+    &lt;p&gt;Age: @person.Age&lt;/p&gt;
+}</code></pre>
+</section>
+<section id="blazor---razor---comments" class="slide level2">
+<h2>Blazor - Razor - Comments</h2>
+<pre class="razor"><code>@*
+    blabla
+*@</code></pre>
+</section>
+<section id="blazor---razor---events" class="slide level2">
+<h2>Blazor - Razor - Events</h2>
+<p>Producer component side:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>[Parameter]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="kw">public</span> EventCallback&lt;MyEventPayload&gt; OnMyEvent { <span class="kw">get</span>; <span class="kw">set</span>; }</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="co">// ..</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="kw">public</span> async Task <span class="fu">SomeOtherMethod</span>()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>{</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>    <span class="co">// ..</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>    await OnMyEvent.<span class="fu">InvokeAsync</span>(<span class="fu">MyEventPayload</span>());</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Consumer side;</p>
+<pre class="razor"><code>&lt;MyComponent
+  OnMyEvent=&quot;MyEvent&quot;
+&gt;
+&lt;/MyComponent&gt;</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">public</span> async Task <span class="fu">MyEvent</span>(MyEventPayload payload)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>{</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>    <span class="co">// React here.</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>}</span></code></pre></div>
+</section>
+<section id="blazor---app.razor" class="slide level2">
+<h2>Blazor - <code>App.razor</code></h2>
+<p><img data-src="./media/df584f00bba46a65435147ab0171812afdbf8ef5.png" style="width:100.0%" alt="App.razor example" /><br />
+</p>
+</section></section>
+<section>
+<section id="blazor---concepts-avancées" class="title-slide slide level1">
+<h1>Blazor - Concepts avancées</h1>
+
+</section>
+<section id="blazor---hosting-models" class="slide level2">
+<h2>Blazor - Hosting models</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="./media/aad21fc34feecfbb62c48a07dc50fe4c0c8e1914.png" style="width:60.0%" alt="HM Blazor Wasm" /><br />
+</p>
+<p><img data-src="./media/60ab4209adbca77ad18d30499e3e356fc34d7a58.png" style="width:60.0%" alt="HM Blazor Server" /><br />
+</p>
+</div><div class="column">
+<ul>
+<li class="fragment"><p>Blazor WebAssembly</p>
+<ul>
+<li class="fragment">WASM .NET runtime téléchargé coté client via <code>blazor.webassembly.js</code>.</li>
+</ul></li>
+<li class="fragment"><p>Blazor Server</p>
+<ul>
+<li class="fragment">Côté client plus léger <code>blazor.server.js</code> établit une connection <em>SignalR</em> avec le server.</li>
+<li class="fragment">Support de plus vieux navigateurs (sans support <em>WASM</em>).</li>
+<li class="fragment">C’est le <em>hosting model</em> que nous avons utilsé.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="blazor-server---rendering-mode" class="slide level2">
+<h2>Blazor Server - Rendering mode</h2>
+<div class="columns">
+<div class="column">
+<p>Définit dans <code>_Host.cshtml</code> via l’attribut <code>render-mode</code> du <code>app.component</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="co">&lt;!-- ... --&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>    <span class="co">&lt;!-- ... --&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    <span class="kw">&lt;app&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>        <span class="kw">&lt;component</span><span class="ot"> type=</span><span class="st">&quot;typeof(App)&quot;</span><span class="ot"> render-mode=</span><span class="st">&quot;ServerPrerendered&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    <span class="kw">&lt;/app&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    <span class="co">&lt;!-- ... --&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+</div><div class="column">
+<ul>
+<li class="fragment"><p>Voici les mode que j’ai pu essayé:</p>
+<ul>
+<li class="fragment"><p><code>ServerPrerendered</code></p>
+<ul>
+<li class="fragment">Un rendu du <em>DOM</em> est effectué côté server à l’initialization de l’app (code roulé côté server).</li>
+<li class="fragment">Ensuite, l’application blazor effectue le rendu côté client.</li>
+</ul></li>
+<li class="fragment"><p><code>Server</code></p>
+<ul>
+<li class="fragment">Pas de rendu côté server, rendu <em>DOM</em> complètement côté client.</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><p>Autres valeures possibles:</p>
+<p><code>Static</code>, <code>WebAssembly</code>, <code>WebAssemblyPrerendered</code>:</p>
+<p>Voir <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.rendering.rendermode?view=aspnetcore-5.0"><code>render-mode</code> - doc</a> pour plus de détails.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="blazor---validation-formulaires" class="slide level2">
+<h2>Blazor - Validation formulaires</h2>
+<ul>
+<li class="fragment"><p>2 tags intéressant à connaître:</p>
+<pre class="razor"><code>&lt;DataAnnotationsValidator /&gt;
+&lt;ValidationSummary /&gt;</code></pre></li>
+<li class="fragment"><p>Une autre découvert côté validation:</p>
+<p><a href="https://fluentvalidation.net/">FluentValidation</a></p></li>
+</ul>
+</section>
+<section id="blazor---authorization" class="slide level2">
+<h2>Blazor - Authorization</h2>
+<p>From <code>*.razor</code> / blazor pages and components:</p>
+<p>It can be retrived using <code>@context.User</code> (<code>context</code> being of type <code>AuthenticationState</code>) when inside the <code>AuthorizeView</code> which itself should be inside the top level <code>App.razor</code> <code>CascadingAuthenticationState</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>&lt;AuthorizeView&gt;</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    &lt;Authorized&gt;</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>        @context.<span class="fu">User</span>.<span class="fu">Identity</span>.<span class="fu">Name</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>    &lt;/Authorized&gt;</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>&lt;/AuthorizeView&gt;</span></code></pre></div>
+<p>From a <em>blazor component</em>:</p>
+<p>Otherwise, from a <em>blazor component</em> (still within a top level <code>CascadingAuthenticationState</code>), it can be retrieve using the <em>cascading parameter</em> of type <code>Task&lt;AuthenticationState&gt;</code>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>[CascadingParameter]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="kw">private</span> Task&lt;AuthenticationState&gt; AuthenticationStateTask { <span class="kw">get</span>; <span class="kw">set</span>; }</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a><span class="kw">protected</span> <span class="kw">override</span> async Task <span class="fu">MyTask</span>()</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>{</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>    AuthenticationState state = await AuthenticationStateTask;</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a>}</span></code></pre></div>
+</section></section>
+<section>
+<section id="blazor-leçons-apprises" class="title-slide slide level1">
+<h1>Blazor Leçons apprises</h1>
+
+</section>
+<section id="blazor-leçons-apprises-1" class="slide level2">
+<h2>Blazor Leçons apprises</h2>
+<ul>
+<li class="fragment"><p>Session and stockage and le contexte <em>Blazer Server</em>:</p></li>
+<li class="fragment"><p>Pour tout ce qui est stockage session (e.g: login, language), on peut faire un roundtrip vers un controlleur MVC standard de façon à raffraîchir les entête de requête avec de nouvelles données.</p></li>
+</ul>
+</section></section>
+<section id="questions" class="title-slide slide level1">
+<h1>Questions?</h1>
+
+</section>
+
+<section>
+<section id="à-propos" class="title-slide slide level1">
+<h1>À-propos</h1>
+
+</section>
+<section id="à-propos---cette-présentation" class="slide level2">
+<h2>À-propos - Cette présentation</h2>
+<ul>
+<li class="fragment"><p>Présentation rendu disponible sur:</p>
+<p><a href="https://github.com/amotus/jrg-slides-blazor-overview" class="uri">https://github.com/amotus/jrg-slides-blazor-overview</a></p></li>
+<li class="fragment"><p>Code source également disponible:</p>
+<p><a href="https://amotus.github.io/jrg-slides-blazor-overview/" class="uri">https://amotus.github.io/jrg-slides-blazor-overview/</a></p></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="./revealjs-assets/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'concave', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+        height: 1080,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: './revealjs-assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: './revealjs-assets/plugin/zoom-js/zoom.js', async: true },
+          { src: './revealjs-assets/plugin/math/math.js', async: true },
+          { src: './revealjs-assets/plugin/notes/notes.js', async: true },
+          { src: './revealjs-menu-assets/menu.js', async: true },
+          { src: './revealjs-toolbar-assets/toolbar.js', async: true }
+        ],
+    	toolbar: {
+    		// Specifies where the toolbar will be shown: 'top' or 'bottom'
+    		position: 'bottom',
+
+    		// Add button to toggle fullscreen mode for the presentation
+    		fullscreen: true,
+
+    		// Add button to toggle the overview mode on and off
+    		overview: false,
+
+    		// Add button to pause (hide) the presentation display
+    		pause: false,
+
+    		// Add button to show the speaker notes
+    		notes: false,
+
+    		// Add button to show the help overlay
+    		help: false,
+
+    		// If true, the reveal.js-menu will be moved into the toolbar.
+    		// Set to false to leave the menu on its own.
+    		captureMenu: true,
+
+    		// If true, the playback control will be moved into the toolbar.
+    		// This is only relevant if the presentation is configured to autoSlide.
+    		// Set to false to leave the menu on its own.
+    		capturePlaybackControl: true,
+
+    		// By default the menu will load it's own font-awesome library
+    		// icons. If your presentation needs to load a different
+    		// font-awesome library the 'loadIcons' option can be set to false
+    		// and the menu will not attempt to load the font-awesome library.
+    		loadIcons: true
+    	},
+      });
+    </script>
+    </body>
+</html>
