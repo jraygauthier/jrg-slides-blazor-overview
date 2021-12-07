@@ -4,7 +4,7 @@
 
  -  Présentation rendu disponible sur:
 
-    <https://github.com/amotus/jrg-slides-blazor-overview>
+    <https://github.com/jraygauthier/jrg-slides-blazor-overview>
 
 
  -  Code source également disponible:
