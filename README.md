@@ -60,7 +60,7 @@ GitHub pages
 
 This slide show is currently hosted on [GitHub Pages].
 
-Here's the link: <https://amotus.github.io/jrg-slides-blazor-overview/>.
+Here's the link: <https://jraygauthier.github.io/jrg-slides-blazor-overview/>.
 
 The source for the index page is [docs/index.md](./docs/index.md).
 
@@ -98,7 +98,7 @@ or this method of doing presentations. See:
 [TODO.md](./TODO.md).
 
 
-[available *en français*]: https://amotus.github.io/jrg-slides-blazor-overview/.
+[available *en français*]: https://jraygauthier.github.io/jrg-slides-blazor-overview/.
 [nix]: https://nixos.org/nix/download.html
 [Giphy]:https://giphy.com/
 [GitHub Pages]: https://pages.github.com/

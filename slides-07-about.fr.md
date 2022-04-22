@@ -9,5 +9,5 @@
 
  -  Code source également disponible:
 
-    <https://amotus.github.io/jrg-slides-blazor-overview/>
+    <https://jraygauthier.github.io/jrg-slides-blazor-overview/>
 
